@@ -46,7 +46,7 @@ jobs:
               fi
         shell: bash
       - name: Save Code Coverage Output
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: coverage-${{ matrix.operating-system }}
           path: lcov.info
@@ -63,7 +63,7 @@ jobs:
           echo "$BUILD_INFO" > $GITHUB_WORKSPACE/out/wwwroot/build-info.json
         shell: bash
       - name: Upload Published Artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: placeholder-api-${{ matrix.operating-system }}
           path: out
@@ -83,7 +83,7 @@ jobs:
 #    steps:
 #      - uses: actions/checkout@master
 #      - name: Download Published Artifact
-#        uses: actions/download-artifact@v1
+#        uses: actions/download-artifact@v5
 #        with:
 #          name: placeholder-api-ubuntu-latest
 #          path: built-api
@@ -149,7 +149,7 @@ jobs:
 #              echo ::set-env name=TEST_EXIT_CODE::$?
 #              exit 0
 #      - name: Upload Integration test results
-#        uses: actions/upload-artifact@v1
+#        uses: actions/upload-artifact@v4
 #        with:
 #          name: integration-test-results
 #          path: integration-tests/target
