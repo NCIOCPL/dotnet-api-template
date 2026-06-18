@@ -1,3 +1,8 @@
+> [!WARNING]
+> This repository has been archived and is no longer maintained.  
+> The code is provided for historical reference and may contain unpatched or unknown vulnerabilities.  
+> It should not be used in production systems.  
+
 # placeholder api
 This is a template repository for creating a dotnet API. It contains the common files and directory structures, but does not include the actual API project.
 
